@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>HTML Animation Wk 2</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style> 
+#circle {
+	border-radius: 50%;
+	width: 200px;
+	height: 200px; 
+	background: red;background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, yellow 0%, orange 94%, red 92%);
+	background-image: -webkit-radial-gradient(45px 45px, circle cover, red, blue);
+	background-image: radial-gradient(45px 45px 45deg, circle cover, yellow 0%, orange 94%, red 92%);
+	
+	animation-name: spin; 
+	animation-duration: 4s; 
+	animation-iteration-count: infinite; 
+	animation-timing-function: linear;
+	-webkit-animation: mycircle 4s;
+	animation: mycircle 4s;
+	}
+
+@-webkit-keyframes mycircle {
+	from {transform: rotate(0deg);}
+	to {transform: rotate(360deg);}
+}
+
+@keyframes mycircle {
+	from {transform: rotate(0deg);}
+	to {transform: rotate(360deg);}
+	}
+	
+
+	
+	
+</style>
+    </head>
+    <body>
+		
+        <div id="block"></div>
+		<div id="circle"></div>
+		
+		
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>JavaScript Objects</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+    </head>
+    <body> 
+        <div id="output"></div>
+		
+		<script>
+			var guitar = new Object();
+			guitar.type = "acoustic";
+			guitar.color = "sunburst";
+			guitar.stringNum = "6";
+			guitar.stringtype = "steel";
+			guitar.fingerboard = "pearl in-lay mahogany";
+			guitar.fingerboardLength = "48 inches"
+			guitar.bodystyle = "highcut";
+			var textOut = "You want a " + guitar.color + " " + guitar.bodystyle + " " + guitar.type + " " + guitar.stringNum + " string " + 
+			guitar.stringtype + "guitar, with a " + guitar.fingerboardLength + " " + guitar.fingerboard + " fingerboard.";		 
+			document.getElementById("output").innerHTML = textOut;
+			
+		</script>
+    </body>
+</html>
