@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<band>
+ <name>Pink Floyd</name>
+</band>
+<band>
+  <name>Evanescence</name>
+</band>
+<band>
+  <name>Beatles</name>
+</band>
+<band>
+  <name>Rush</name>
+</band>
