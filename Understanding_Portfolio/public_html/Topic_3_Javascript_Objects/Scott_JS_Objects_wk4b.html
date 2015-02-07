@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>JavaScript Object 2</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <p id="demo"></p>
+
+        <script>
+            function person(first, last, age, eye) {
+                this.nameFirst = first;
+                this.nameLast = last;
+                this.age = age;
+                this.eyeColor = eye;
+            }
+
+            var myFather = new person("Frank", "Doe", 50, "brown");
+            var myMother = new person("Lisa", "Rally", 48, "green");
+
+            document.getElementById("demo").innerHTML =
+            myFather.nameFirst + " is " + myFather.age + " and has " + myFather.eyeColor + " eyes." + " " +
+            myMother.nameFirst + " is " + myMother.age + " and has " + myMother.eyeColor + " eyes.";
+        </script>
+    </body>
+</html>
