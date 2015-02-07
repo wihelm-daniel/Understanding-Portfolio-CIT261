@@ -4,34 +4,39 @@
 <meta charset="utf-8">
 	<title>My Favorite Bands</title>
 <script>
-function loadXMLDoc()
+function loadXMLDoc(url)
 {
 var xmlhttp;
-if (window.XMLHttpRequest){
-   // First we need to determine if we are using the XMLHttpRequest method or the ActiveXObject method.
-   
-	xmlhttp=new XMLHttpRequest(); // code for IE7+, Firefox, Chrome, Opera, Safari
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
   }
-else {
-	xmlhttp=new ActiveXObject("Microsoft.XMLHTTP"); // code for IE6, IE5
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
   }
-  
 xmlhttp.onreadystatechange=function()
   {
   if (xmlhttp.readyState==4 && xmlhttp.status==200)
     {
-    document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
+    document.getElementById('A1').innerHTML=xmlhttp.status;
+    document.getElementById('A2').innerHTML=xmlhttp.statusText;
+    document.getElementById('A3').innerHTML=xmlhttp.responseText;
     }
   }
-xmlhttp.open("GET","Favorite_Bands.txt",true);
+xmlhttp.open("GET",url,true);
 xmlhttp.send();
 }
 </script>
+
 </head>
 <body>
 
-<div id="myDiv"><h2>My favorite bands are...</h2></div>
-<button type="button" onclick="loadXMLDoc()">Press Me to See</button>
+<h2>Retrieve data from XML file</h2>
+<p><b>Status:</b><span id="A1"></span></p>
+<p><b>Status text:</b><span id="A2"></span></p>
+<p><b>Response:</b><span id="A3"></span></p>
+<button onclick="loadXMLDoc('Favorite_Bands.xml')">Get XML data</button>
 
 </body>
 </html>
