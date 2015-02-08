@@ -14,7 +14,7 @@ and open the template in the editor.
                 if(typeof(Storage) !== "undefined") {
                     // store user defined text
                     localStorage.setItem("userText", userInput);
-                    output = "Success!"
+                    output = "Success!";
                 } else {
                     output ="Error! Try again.";                    
                 }
@@ -32,6 +32,6 @@ and open the template in the editor.
         <button onClick="saveData(userInput)">Save</button>
         <div id="firstDisplay"></div>
         <button onClick="getData()">Retrieve</button>
-        <div id="secondDisplay"</div>
+        <div id="secondDisplay"></div>
     </body>
 </html>
