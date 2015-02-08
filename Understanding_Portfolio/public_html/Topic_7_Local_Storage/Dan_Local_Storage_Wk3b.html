@@ -15,7 +15,7 @@ and open the template in the editor.
                     // store user defined text
                     localStorage.setItem("userText", userInput);
                     output = "Success!"
-                else
+                } else {
                     output ="Error! Try again.";                    
                 }
                getElementById("firstDisplay").innerHTML = output;     
@@ -32,6 +32,6 @@ and open the template in the editor.
         <button onClick="saveData(userInput)">Save</button>
         <div id="firstDisplay"></div>
         <button onClick="getData()">Retrieve</button>
-        <div id="secondDisplay</div>
+        <div id="secondDisplay"</div>
     </body>
 </html>
