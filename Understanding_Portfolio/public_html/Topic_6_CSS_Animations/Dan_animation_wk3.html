@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Animation Sandbox</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            div {
+                width: 0;
+                height: 0;
+                border-left: 50px solid transparent;
+                border-right: 50px solid transparent;
+                border-bottom: 100px solid pink;
+                -webkit-animation: floyd 5s ease-in-out 2s  infinite alternate; //FF, Chrome, Safari... da Cool browsers
+                animation: floyed 5s; //IE... the other browsers
+            }    
+            
+            @-webkit-keyframes floyd {
+                0% {
+                    left: 0;
+                    top: 0;
+                  }
+                50% {
+                  left: 244px;
+                  top: 100px;
+                }
+                100% {
+                    left: 488px;
+                    top: 0;
+                 }
+                
+            }
+            
+            @keyframes floyd {
+                0% {
+                    left: 0;
+                    top: 0;
+                  }
+                50% {
+                  left: 244px;
+                  top: 100px;
+                }
+                100% {
+                    left: 488px;
+                    top: 0;
+                 }
+            }
+              
+            
+        </style>
+    </head>
+    <body>
+        <div></div>
+    </body>
+</html>
