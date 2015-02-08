@@ -10,9 +10,9 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script>
-            function saveData(userInput) {
-                if(typeof(Storage) !== "undefined") {
-                    // store user defined text
+            function saveData() {
+               var userInput = getElementById.("userInput").value;
+                // store user defined text
                     localStorage.setItem("userText", userInput);
                     output = "Success!";
                 } else {
@@ -28,8 +28,8 @@ and open the template in the editor.
         </script>
     </head>
     <body>
-        Enter Text to Save:<input type="text" name="userInput">
-        <button onClick="saveData(userInput)">Save</button>
+        Enter Text to Save:<input type="text" id="userInput">
+        <button onClick="saveData()">Save</button>
         <div id="firstDisplay"></div>
         <button onClick="getData()">Retrieve</button>
         <div id="secondDisplay"></div>
