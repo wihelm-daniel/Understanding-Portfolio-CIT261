@@ -11,7 +11,8 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script>
             function saveData() {
-               var userInput = getElementById.("userInput").value;
+               var userInput = getElementById.("userInput").value;               
+               if (typeof(Storage) != "undefined") {
                 // store user defined text
                     localStorage.setItem("userText", userInput);
                     output = "Success!";
