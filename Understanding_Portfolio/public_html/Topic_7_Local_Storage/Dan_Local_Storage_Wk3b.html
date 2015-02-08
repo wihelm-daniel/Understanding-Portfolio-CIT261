@@ -19,11 +19,11 @@ and open the template in the editor.
                 } else {
                     output ="Error! Try again.";                    
                 }
-               getElementById("firstDisplay").innerHTML = output;     
+               document.getElementById("firstDisplay").innerHTML = output;     
             }
             function getData(){
                 // retrieve user defined text
-                getElementById("secondDisplay").innerHTML = localStorage.getItem("userText");
+                document.getElementById("secondDisplay").innerHTML = localStorage.getItem("userText");
                 
             }
         </script>
