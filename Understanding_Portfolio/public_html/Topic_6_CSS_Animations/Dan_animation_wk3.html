@@ -21,28 +21,53 @@ and open the template in the editor.
             }    
             
             @-webkit-keyframes floyd {
+               
                 0% {
-                    background-position: left;
-                  }
-                50% {
-                  background-position: center;
+                  -webkit-transform: rotate(-45deg);
+                }
+                25% {border-left-color:transparent;}
+                26% {
+                  border-left-color:  rgba(200,200,200,1);
+                }
+                50% {border-bottom-color:transparent;}
+                51% {
+                  border-bottom-color:  rgba(200,200,200,1);
+                }
+                75% {border-right-color:transparent;}
+                76% {
+                  border-right-color:  rgba(200,200,200,1);
                 }
                 100% {
-                    background-position: right;
-                 }
-                
-            }
+                  -webkit-transform: rotate(315deg);
+                  border-left-color:  rgba(200,200,200,1);
+                  border-bottom-color:  rgba(200,200,200,1);
+                  border-right-color:  rgba(200,200,200,1);
+                }
+              }
+            
             
             @keyframes floyd {
                 0% {
-                    background-position: left;
-                  }
-                50% {
-                  background-position: center;
+                  transform: rotate(-45deg);
+                }
+                25% {border-left-color:transparent;}
+                26% {
+                  border-left-color:  rgba(200,200,200,1);
+                }
+                50% {border-bottom-color:transparent;}
+                51% {
+                  border-bottom-color:  rgba(200,200,200,1);
+                }
+                75% {border-right-color:transparent;}
+                76% {
+                  border-right-color:  rgba(200,200,200,1);
                 }
                 100% {
-                    background-position: right;
-                 }
+                  transform: rotate(315deg);
+                  border-left-color:  rgba(200,200,200,1);
+                  border-bottom-color:  rgba(200,200,200,1);
+                  border-right-color:  rgba(200,200,200,1);
+                }
             }
               
             
