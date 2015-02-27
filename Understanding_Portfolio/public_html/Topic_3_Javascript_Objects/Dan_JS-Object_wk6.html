@@ -9,27 +9,26 @@ and open the template in the editor.
         <title>Fun with JavaScript Objects</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script>
-            function person(first, middle, last, address, city, state, zip, phone, email) {
-                this.firstName = first;
-                this.middleName = middle;
-                this.lastName = last;
-                this.address = address;
-                this.city = city;
-                this.state = state;
-                this.zip = zip;
-                this.phone = phone;
-                this.email = email;
-            }
-
-            var myDuck = new person("Donald", "LeRoy", "Duck", "123 Disney Lane, Apt J", "Anaheim", "CA", 01812, "231-756-9872", "dlduck@disney.com");
-            var myMouse = new person("Speedy", "LePew", "Gonzales", "72 Juan Veldez SW", "Arizona City", "", 85462, "923-250-5555", "gonzo@tvmouse.com");
-            var myCat = new person("Thomas", "Jay", "Catt", "8 Nathan Lane", "Tuskaloosa", "OK", 51210, "630-254-4623", "dlduck@disney.com");
-
-            document.getElementById("demo").innerHTML = "My favorite cartoon cat, mouse and duck are:";
-        </script>
+        
     </head>
     <body>
        <p id="demo"></p>
+	   
+	   <script>
+            function person(first, middle, last) {
+     			this.firstName = first;
+                this.middleName = middle;
+                this.lastName = last;
+                }
+
+            var myDuck = new person("Donald", "LeRoy", "Duck");
+            var myMouse = new person("Speedy", "LePew", "Gonzales");
+            var myCat = new person("Tom", "Jay", "Cat");
+			
+			var textOut = "My favorite cartoon animals are "+ myDuck.firstName + " " + myDuck.lastName+ ", " + myMouse.firstName + " " +  myMouse.lastName + ", and " + myCat.firstName +
+			" the " + myCat.lastName + "."
+
+            document.getElementById("demo").innerHTML = textOut;
+        </script>
     </body>
 </html>
