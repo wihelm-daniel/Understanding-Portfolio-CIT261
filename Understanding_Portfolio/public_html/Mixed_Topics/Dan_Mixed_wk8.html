@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>JS Objects, DOMS and Local Storage</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script>
+           
+           // add data to userEvent object
+            function addData() {
+                var title = document.getElementById("title").value;
+                var date = document.getElementById("date").value;
+                var time = document.getElementById("time").value;
+                
+                var new_is_a_keyword_and_cant_be_an_identifier = title = new event(date, time);
+                
+                document.getElementById("display").innerHTML = "Event added.";    
+               
+           }   
+           
+            function removeData() {
+                var eventName = document.getElementByID("eventName").value;
+                if (typeof(Storage) !== "undefined") {
+                  localStorage.removeItem(event(eventName));  
+                  document.getElementById("display").innerHTML = "The " + eventName + " was removed from your computer.";
+                            } else {
+                    document.getElementById("display").innerHTML = "No local storage options. Try another browser.";
+                    }
+            }
+           // store data from userEvent object to local storage.
+            function setData() {       
+                var eventName = document.getElementByID("eventName").value;
+                 if (typeof(Storage) !== "undefined") {
+                  localStorage.setItem(eventName, event(eventName));  
+                  document.getElementById("display").innerHTML = "Data saved to your computer.";
+                            } else {
+                    document.getElementById("display").innerHTML = "No local storage options. Try another browser.";
+                    }
+            }
+            
+            function getData() {
+                // Retrieve
+                if (typeof(Storage) !== "undefined") {
+                     var event = localStorage.getItem(event()); 
+                     
+                } else {
+                    document.getElementById("display").innerHTML = "No local storage options.Try another browser.";
+                    }
+                document.getElementById("display").innerHTML = event;  
+            }
+            
+            
+        </script>
+        
+    </head>
+    <body>
+        <main>
+            <h3>Let's play with some data.</h3>
+                What is the title of the event? <input type="text" name="title" id="title"><br>
+                What day is the event? <input type="date" name="date" id="date"><br>
+                What time does the event start? <input type="time" name="time" id="time"><br>
+                Event the name of the event to retrieve or delete? <input type="text" name="event" id="eventName">
+            <ul>
+                <li><button type="button" onclick="addData()">Add event</button></li>
+                <li><button type="button" onclick="removeData()">Delete event</button></li>
+                <li><button type="button" onclick="setData()">Store data to my computer</button></li>
+                <li><button type="button" onclick="getData()">Get single event from my computer</button></li>              
+            </ul>
+           
+            <div id="display"></div>
+            
+        </main>
+        
+        <script>
+            function event(title, date, time) {
+                this.title = title;
+                this.date = date;
+                this.time = time;
+                }
+        </script>
+        
+    </body>
+</html>
