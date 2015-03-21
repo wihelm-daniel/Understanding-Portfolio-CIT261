@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>JSON Mix</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function myFunction() {
+                var myArray = [];
+                var lowNum = document.getElementById("firstNumber").value;
+                var medNum = document.getElementById("secondNumber").value;
+                var highNum = document.getElementById("thirdNumber").value;
+                 for (i=0; i <= (highNum - 1); i++) {
+                     myArray[i] = lowNum * medNum * i;
+                 }
+                 var arrayLength = myArray.length;
+                 var text = "";
+                 var i = 0;
+                 while (i <= (arrayLength - 1)) {
+                     text = text + myArray[i] + " ";
+                     i++                     
+                 }
+                 document.getElementById("display").innerHTML = text;
+            }
+        </script>
+    </head>
+    <body>
+        <h3>Please enter two numbers. One low and one medium.</h3>
+        Low Number: <input type="number" name="firstNumber" id="firstNumber">
+        Medium Number: <input type="number" name="secondNumber" id="secondNumber">
+        <h3>Please enter a higher number as well.</h3>
+         High Number: <input type="number" name="thirdNumber" id="thirdNumber">
+        
+        <button type="button" onClick="myFunction()">Start Mixing</button>
+        
+        <div id="display"></div>
+        
+    </body>
+</html>
